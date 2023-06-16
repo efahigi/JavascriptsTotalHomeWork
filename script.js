@@ -29,10 +29,10 @@ console.log(myNum )
          // Assign is assign a value to a variable usind equal sign
 
 // 5.What is pseudocoding and why should you do it?
-// Pseudocode is an informal way of programming descriptionm that does not require any strict programming language syntax or underlying technology considerations. 
+        // Pseudocode is an informal way of programming descriptionm that does not require any strict programming language syntax or underlying technology considerations. 
 
 //6.What percentage of time should be spent thinking about how you're going to solve a problem vs actually typing in code to solve it?
-             //I would say it is close to 90% is understanding the problem.
+        //I would say it is close to 90% is understanding the problem.
 
 //B. Strings 
 // 1. Create a variable called firstVariable
@@ -104,7 +104,7 @@ if ( age >= 16){
 //II. Loops
 //A. The basics
 //1. Write a loop that will print out all the numbers from 0 to 10, inclusive
-for(let i = 0; i < 100; i++){
+for(let i = 0; i <= 10; i++){
     console.log(i)
 }
 
@@ -114,7 +114,7 @@ for(let i = 10; i <= 400; i++){
 }
 
 //3.Write a loop that will print out every third number starting with 12 and going no higher than 4000
-for(let i = 12; i <= 400; i += 3){
+for(let i = 12; i <= 4000; i += 3){
        console.log(i)
      }
 
@@ -134,11 +134,11 @@ for(let i = 12; i <= 400; i += 3){
 //1. For the numbers 0 - 100, print out "I found a number. High five!" if the number is a multiple of five
 for(let i = 0; i <= 100; i++){
     if( (i % 5) === 0 ){
-      console.log("I found a" + ""+ i +". High five!");
+      console.log(`I found a ${i }. High five!`);
     }  else if ( (i % 3 )=== 0 ){
-      console.log("I found a" + ""  + i + ". Three is a crowd!");
+      console.log(`I found a ${i }. Three is a crowd!`);
     } else if((i % 3) === 0 && (i % 5) === 0) {
-      console.log("I found a" + ""  + i + ". Three is a crowd!" + "I found a" + ""  + i + ". Three is a crowd!" );
+      console.log( `I found a ${i }. Three is a crowd!  and I found a ${i }. High five!`);
       
     } else{
       console.log(i)
@@ -165,7 +165,7 @@ console.log(mult);
 
 // III. Arrays & Control flow
 //1.What are the things in an array called?
-       //An Element
+           //An Element
 
 //2.Do Arrays guarantee those things will be in order?
           //No but orderd in index start from 0
@@ -175,16 +175,17 @@ console.log(mult);
 
              //B. Easy Does It
 // 1.Create an array that contains three quotes and store it in a variable called qotes
-// const name = [ "Jhon","Mark ","Marta"];
+    const name = [ "Jhon","Mark ","Marta"];
+    console.log(name)
 // C. Accessing elements
 // Given the following array 
 const randomThings = [1, 10, "Hello", true];
 // // How do you access the 1st element in the array?
 let randomThing = randomThings[0];
-// //console.log(randomThing)
+console.log(randomThing)
 // Change the value of "Hello"to "World"
 randomThings[2] = "World";
-// // Check the value of the array to make sure it updated the array. How? Why, yes! console.log();
+// Check the value of the array to make sure it updated the array. How? Why, yes! console.log();
  console.log(randomThings)
 
 // D. Change values
@@ -217,12 +218,14 @@ let myArrayX = myArray.shift();
 console.log(myArray);
 // Reverse this array using Array.prototype.reverse(). 
 // Did you mutate the array? 
-           //No it doesn't
-// What does mutate mean? change 
+           ///No it doesn't
+// What does mutate mean? 
+           ///change 
 // Did the .reverse()method return anything?
-            //yes, the (reverse()) method reverses the order of the elements in an array.
-myArray. reverse()
-console.log(myArray)
+            ///yes, the (reverse()) method reverses the order of the elements in an array.
+const income = [5, 10, 20,300, 500 ]   
+income. reverse()
+console.log(income)
 
 // F. Biggie Smalls
 // Create a variable that contains an integer.
@@ -302,8 +305,8 @@ console.log(thomsCloset[2][1]);
 //7. Log a sentence about what Thom's wearing. Example: "Thom is looking fierce in a grey button-up, jeans and wool scarf!"
 console.log(`Tom is looking fierce in the ${thomsCloset[0][0]}, ${thomsCloset[1][1]} and ${thomsCloset[2][1]} `);
 //8. Get more specific about what kind of PJs Thom's wearing this winter. Modify the name of his PJ pants to Footie Pajamas.
-let thomsCloset1 = thomsCloset[1].splice(2,1,"Footie Pajamas");
-console.log(thomsCloset);
+let thomsCloset1 = thomsCloset[1].splice(2, 1,"Footie Pajamas");
+console.log(thomsCloset[1]);
 
 // IV. Functions
 //  A. printGreeting
@@ -357,7 +360,7 @@ let getMultipleLengths = function(array){
 	}
 	return arrayStringLength;
 }
-console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+console.log(getMultipleLengths(["hello", "what", "class", "today", "knowledge"]));
 
 //G. maxOfThree
 //Define a function maxOfThreethat takes three numbers as arguments and returns the largest of them. If all numbers are the same, it doesn't matter which one is returned. If the two largest numbers are the same, one of them should be returned. Be sure to test it with larger values in each of the three locations.
@@ -466,20 +469,21 @@ for (i = 0; i < user.friend.purchased.length; i++) {
 // 3. make the user's name uppercase
 const updateUser = () => {
   user.age++;
-  user.name.toUpperCase()
+  user.name = user.name.toLocaleUpperCase();
 };
-updateUser(user)
+ console.log( user);
+updateUser(user);
+
 // 2. Write a function oldAndLoudthat performs the exact same tasks as updateUser, but instead of hard-coding it to only work on our userobject, make it take a parameter person, and have it modify the object that is passed in as an argument when the function is called. Call your oldAndLoudfunction with useras the argument.
 const oldAndLoud = (person) => {
   person.age++;
-  person.name.toUpperCase()
+  person.name = person.name.toLocaleUpperCase();
 };
-oldAndLoud(user.friend);
-
-
+oldAndLoud(user.friend );
+console.log(user);
 
 // Requirements Complete! Hungry for More?
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 // Cat Combinator
